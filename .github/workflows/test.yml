@@ -17,4 +17,6 @@ jobs:
           name: ${{ github.workflow }} # Default: name of workflow. This name is shown with the check, but can be changed.
 
       - name: my-step
-        run: echo "Hello World! from shared wf bot"
+        run: |
+          echo "Hello World! from shared wf bot"
+          echo ${{ github.event }}
